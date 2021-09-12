@@ -1,0 +1,31 @@
+@mixin hoBoxSizing ($property) {
+    -webkit-box-sizing: $property;
+       -moz-box-sizing: $property;
+            box-sizing: $property;
+}
+@mixin hoFlex () {
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+}
+@mixin hoFlexFlow ($property) {
+    -webkit-flex-flow: $property;
+        -ms-flex-flow: $property;
+            flex-flow: $property; 
+}
+@mixin hoBoxShadow ($property) {
+    -webkit-box-shadow: $property;
+       -moz-box-shadow: $property;
+            box-shadow: $property;
+}
+@font-face {
+    font-family: 'HeydingsControlsRegular';
+    src: url('../font/heydings_controls-webfont.eot');
+    src: url('../font/heydings_controls-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../font/heydings_controls-webfont.woff') format('woff'),
+        url('../font/heydings_controls-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

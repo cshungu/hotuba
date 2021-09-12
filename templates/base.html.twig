@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/x-icon" href="{{asset('favicon.ico')}}">
+        <link rel="stylesheet" href="{{ asset("css/hotuba.css") }}">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;1,200;1,300;1,700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/83f4286022.js"  crossorigin="anonymous"></script>
+        {% block stylesheets %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+        <title>{% block title %}Welcome!{% endblock %}</title>
+    </head>
+    <body>
+        <div class="wrapper" role="wrapper">
+            <header>
+            </header>
+            <div class="search">
+                <!-- Form search -->
+            </div>
+            <main>
+                {% block body %}{% endblock %}
+            </main>
+            <aside class="sidebar" role="region" aria-labelledby="sidebar">
+            </aside>
+            <footer>
+                <div class="ho-footer-copyright">©️ hotuba</div>
+            </footer>
+        </div>
+    </body>
+</html>

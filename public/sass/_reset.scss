@@ -1,0 +1,28 @@
+html {
+  font-size: 62.5%;
+  @include hoBoxSizing(border-box);
+}
+*, 
+*::before, 
+*::after {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  @include hoBoxSizing(inherit);
+}
+:root {
+    --ho-primary:#2980b9;
+    --ho-primary-light: #3498db;
+    --ho-secondary:#2c3e50;
+    --ho-secondary-light: #34495e;
+    --ho-sucess:#27ae60;
+    --ho-danger: #c0392b;
+    --ho-warning:#f39c12;
+    --ho-info: #16a085;
+    --ho-light: #ffffff;
+    --ho-dark: #1e272e;
+    --ho-divider:#ecf0f1;
+    --font-family: 'Mulish', sans-serif;
+    --box-shadow: 0 1px 2px rgba(60, 64, 67, 0.1), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
