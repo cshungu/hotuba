@@ -22,3 +22,9 @@
         @content;
     }
 }
+
+@mixin ex {
+    @media (min-width: 48em) {
+        @content;
+    }
+}

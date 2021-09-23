@@ -12,7 +12,7 @@ html {
   @include hoBoxSizing(inherit);
 }
 :root {
-    --ho-primary:#2980b9;
+    --ho-primary:#12cbc4;
     --ho-primary-light: #3498db;
     --ho-secondary:#2c3e50;
     --ho-secondary-light: #34495e;
@@ -23,6 +23,7 @@ html {
     --ho-light: #ffffff;
     --ho-dark: #1e272e;
     --ho-divider:#ecf0f1;
+    --ho-hint: #f4f4f4;
     --font-family: 'Mulish', sans-serif;
     --box-shadow: 0 1px 2px rgba(60, 64, 67, 0.1), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
 }

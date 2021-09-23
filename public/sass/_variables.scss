@@ -3,12 +3,17 @@
        -moz-box-sizing: $property;
             box-sizing: $property;
 }
-@mixin hoFlex () {
+@mixin hoFlex() {
     display: flex;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
+}
+@mixin hoGrid () {
+    display: grid;
+    display: -moz-grid;
+    display: -ms-grid;
 }
 @mixin hoFlexFlow ($property) {
     -webkit-flex-flow: $property;

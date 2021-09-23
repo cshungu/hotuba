@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% block title %}Coup de gueule {% endblock %}
+{% block body %}
+<div class="item-container-grid">
+    {% for item in items %}
+        <div class="item-gred">
+            <div class="thumbnail-container">
+                <a href="" class="thumbnail-link"
+                    data-photo="{{ asset(item.image) }}" data-video="{{ asset(item.video) }}"
+                    data-id="{{ item.id }}">
+                    <div class="thumbnail-block">
+                        <img src="{{ asset(item.image) }}">
+                        <div class="thumbnail-progress">
+                            <div class="thumbnail-bar" role="progressbar" 
+                                aria-valuenow="1" aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="thumbnail-info">
+                    <span>{{ item.titre|e }}</span>
+                    <span>{{ item.datecree }}</span>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
