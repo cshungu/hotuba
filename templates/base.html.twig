@@ -12,13 +12,16 @@
         <link rel="icon" type="image/png" 
             sizes="16x16" href="{{asset('favicon/favicon-16x16.png')}}">
         <link rel="manifest" href="{{ asset('favicon/logo.webmanifest') }}">
-
-        <link rel="stylesheet" href="{{ asset("css/hotuba.css") }}">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;1,200;1,300;1,700&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/83f4286022.js"  crossorigin="anonymous"></script>
-        {% block stylesheets %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+       {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
         <title>{% block title %}Welcome!{% endblock %}</title>
     </head>
     <body>

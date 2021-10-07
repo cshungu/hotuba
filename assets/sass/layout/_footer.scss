@@ -1,0 +1,16 @@
+@use '../mixins/mixin' as *;
+
+footer {
+    grid-area: ft;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--ho-light);
+    margin-top: 2rem;
+    padding: 1rem;
+}
+a {
+    text-decoration: none;
+    color: var(--ho-dark);
+}

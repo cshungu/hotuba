@@ -1,0 +1,63 @@
+@use '../mixins/mixin' as *;
+
+.item-container-grid {
+    @include hoGrid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: 25rem 25rem;
+    grid-auto-rows: 25rem;
+    gap: 2.5rem 2rem;
+    grid-gap: 2.5rem 2rem;
+    @include md {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 1rem;
+        grid-gap: 1rem;
+    }
+    @include xl {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+        gap: 1rem;
+        grid-gap: 1rem;
+    }
+    .item-gred {
+        box-sizing: border-box;
+        margin: 0 1rem;
+    }
+}
+.thumbnail-container {
+    width: 100%;
+    @include hoFlex;
+    flex-flow: column;
+    padding: 0;
+    background-color: var(--ho-light);
+    box-shadow: var(--box-shadow);
+    .thumbnail-link {
+        display: block;
+        .thumbnail-block {
+            img {
+               width: 100%;
+               max-width: 100%; 
+               height: 16rem;
+               object-fit: cover;
+            }
+            .thumbnail-progress {
+                width: 100%;
+                position: relative;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin:-0.4rem 0 0 0;
+                .thumbnail-bar {
+                    width:15%;
+                    height: 0.2rem; 
+                    background-color: var(--ho-primary);
+                }
+            }
+        }
+    }
+    .thumbnail-info {
+        padding: 1rem;
+        display: flex;
+        flex-flow: column;
+        min-height: 8rem;
+        flex: 1 1 auto;
+    }
+}

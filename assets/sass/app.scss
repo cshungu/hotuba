@@ -1,0 +1,15 @@
+@use 'variables';
+@use 'reset';
+@use 'classes';
+@use 'utils';
+@use 'base'; 
+
+/* Layout */
+@use 'layout/wrapper';
+@use 'layout/header';
+@use 'layout/search';
+@use 'layout/sidebar';
+@use 'layout/footer';
+
+/* Components */
+@use 'components/thumbnail.scss';

@@ -1,0 +1,25 @@
+@use '../mixins/mixin' as *;
+
+.sidebar {
+    grid-area: sd;
+    padding: 0;
+    margin-top: 1rem;
+    margin-right: 2rem;
+    @include sm {
+        margin-right: 0;
+    }
+    aside {
+        @include hoFlex;
+        @include hoFlexFlow(column);
+        border-top: 0.125rem solid var(--ho-primary);
+        margin-bottom: 0.625rem;
+        padding-bottom: 0.8rem;
+        padding-top: 0.8rem;
+        .fakeimg {
+            height:  12.5rem;
+            background-color: var(--ho-primary);
+            margin-bottom: 0.313rem;
+            box-shadow: var(--box-shadow);
+        }
+    }
+}
