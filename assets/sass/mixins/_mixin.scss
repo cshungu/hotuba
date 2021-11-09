@@ -25,7 +25,17 @@
        -moz-box-shadow: $property;
             box-shadow: $property;
 }
+@mixin hoTransform ($property) {
+    -webkit-transform: $property;
+        -ms-transform: $property;
+            transform: $property;
+}
 
+@mixin ex {
+    @media (min-width: 48em) {
+        @content;
+    }
+}
 /* Landscape phones and down */
 @mixin xs {
     @media (max-width: 480px) {
@@ -51,8 +61,3 @@
     }
 }
 
-@mixin ex {
-    @media (min-width: 48em) {
-        @content;
-    }
-}

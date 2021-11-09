@@ -11,4 +11,15 @@
     * - Modification    : 
 **/
 import "./sass/app.scss";
-import "./ts/video/video.ts";
+import { Card } from "./ts/Card";
+import { Player } from "./ts/Player";
+
+(function () {
+    Card.init();
+    if (document.getElementById("players")) {
+        window.addEventListener("load", () => {
+            let player: Player = new Player("players");
+            player.init();
+        });
+    }
+})();

@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+{% block title %}Coup de gueule {% endblock %}
+{% block body %}
+<div class="thumbnail-wrap">
+    <figure class="thumbnail" data-picked="block">
+        <div class="player" id="players">
+            {% if item is defined %}
+                <video class="media" data-picked="media" alt="{{item.titre}}">
+                    <source src="{{ asset(item.video) }}" type="video/mp4">
+                    <source src="{{ asset(item.video) }}" type="video/webm">
+                </video>
+                <div class="control" data-picked="control">
+                    <div class="control--progress">
+                        <input type="range" data-picked="progress" name="" id="range" value="0">
+                    </div>
+                    <div class="control--button">
+                        <div class="btn-inner-left">
+                            <button class="fas fa-backward" data-picked="rwd" aria-label="backward"></button>
+                            <button class="fas fa-play" data-picked="play" aria-label="play pause toggle"></button>
+                            <button class="fas fa-forward" data-picked="fwd" aria-label="Forward"></button>
+                            <button class="fas fa-stop" data-picked="stop"  aria-label="stop"></button>
+                            <button class="fas fa-volume-up" data-picked="volumeQ"></button>
+                            <input type="range" data-picked="volume" name="volume" value="0.5" max="1" step="0.1">
+                            <span data-picked="timer"></span>
+                            <span data-picked="seperated"></span>
+                            <span data-picked="duration"></span>
+                        </div>
+                        <div class="btn-inner-right">
+                            <button class="fas fa-expand" data-picked="fullscreen"></button>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </figure>
+</div>
+{% endblock %}

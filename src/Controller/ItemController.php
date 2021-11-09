@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ItemController extends AbstractController
 {
-    #[Route('/item', name: 'item.index')]
+    #[Route('/items', name: 'item.index')]
     public function index(): Response
     {
         $items = [
@@ -68,5 +68,29 @@ class ItemController extends AbstractController
         return $this->render('item/index.html.twig', [
             'items' => $items
         ]);
+    }
+
+    #[Route('/items/{id}', name: 'item.show')]
+    public function show(): Response
+    {
+        $item = [
+            "id"    => "20200612",
+            "titre" => "20200612",
+            "orateur" => "",
+            "source" => "",
+            "image" => "image/items/20200612.jpg",
+            "video" => "video/items/20200612.mp4",
+            "datecree" => "2021-01-07",
+            "description" => "
+                Lorem ipsum dolor sit amet roth troi iol griol jo ipsum dolor 
+                sit amet roth troi iol griol jo
+            "
+        ];
+        return $this->render(
+            'item/show.html.twig',
+            [
+                'item' => $item
+            ]
+        );
     }
 }
